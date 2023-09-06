@@ -1,6 +1,7 @@
 node_modules
 .env.local
 firebase.config.js
+
 # Logs
 logs
 *.log
