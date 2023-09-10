@@ -5,7 +5,7 @@ import parts from '../../assets/images/about_us/parts.jpg'
 
 const About = () => {
     return (
-      <div className="flex flex-col lg:flex-row my-32">
+      <div className="flex flex-col lg:flex-row my-14 lg:my-32">
         <figure className="lg:w-1/2 relative h-auto ">
           <img
             className="rounded-lg w-full lg:w-10/12 "
@@ -18,7 +18,7 @@ const About = () => {
             alt="parts"
           />
         </figure>
-        <div className="card-body mt-14 lg:mt-0 lg:w-1/2 lg:ms-16 ">
+        <div className="card-body mt-14 lg:mt-0 w-full lg:w-1/2 lg:ms-16 ">
           <p className="text-left text-[#FF3811] font-bold text-xl tracking-wider h-6 p-0">
             About Us
           </p>
@@ -37,7 +37,7 @@ const About = () => {
             believable.
           </p>
 
-          <div className="card-actions justify-start h-0">
+          <div className="card-actions justify-center lg:justify-start h-0">
             <button className="btn btn-primary bg-[#FF3811] border-0">
               Get More Info
             </button>

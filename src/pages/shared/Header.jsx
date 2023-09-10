@@ -7,7 +7,7 @@ import { HiOutlineSearch } from "react-icons/hi";
 const Header = () => {
     return (
         
-      <div className="navbar bg-base-100  h-2">
+      <div className="navbar bg-base-100  h-2 sticky">
         <div className="navbar-start">
           <div className=" h-14">
             <img src={logo} alt="" className=" h-full" />

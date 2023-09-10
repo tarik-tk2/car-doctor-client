@@ -7,8 +7,8 @@ import { Link } from "react-router-dom";
 const Banner = () => {
   const images = [img1, img2, img3, img4];
   return (
-    <div className="carousel w-full h-[550px] relative">
-      <div className=" absolute  p-20 z-10 h-full bg-gradient-to-r from-[#141414] lg:w-[700px] to-[rgba(21, 21, 21, 0.00)] text-left  space-y-4	">
+    <div className="carousel w-full lg:h-[550px] relative">
+      <div className="hidden absolute  p-20 z-10 h-full bg-gradient-to-r from-[#141414] lg:w-[700px] to-[rgba(21, 21, 21, 0.00)] text-left  space-y-4	">
         <h1 className="text-6xl text-white font-bold tracking-wider ">
           Affordable
           <br /> Price For Car
@@ -27,14 +27,17 @@ const Banner = () => {
       </div>
       <div id="slide1" className="carousel-item relative w-full">
         <img src={img1} className="w-full" />
-        <div className="absolute flex transform -translate-y-1/2 bottom-2 right-4">
+        <div className="absolute flex transform -translate-y-1/2  lg:translate-y-32 justify-between right-0 left-0  lg:justify-normal  top-1/2   lg:right-4  lg:bottom-2">
           <a
             href="#slide4"
-            className="btn btn-circle me-2 bg-orange-500 border-0"
+            className="btn btn-link no-underline hover:no-underline hover:bg-orange-300 lg:btn-circle lg:me-2  lg:bg-orange-500 border-0"
           >
             ❮
           </a>
-          <a href="#slide2" className="btn btn-circle ms-2 bg-red-600 border-0">
+          <a
+            href="#slide2"
+            className="btn  btn-link  no-underline hover:no-underline hover:bg-red-500 lg:btn-circle lg:ms-2 lg:bg-red-600 border-0"
+          >
             ❯
           </a>
         </div>
