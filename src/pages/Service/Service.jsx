@@ -26,7 +26,7 @@ const Service = () => {
       </div>
       <div className=" grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-4">
         {services.map((service) => (
-          <ServiceCard key={service.id} service={service} />
+          <ServiceCard key={service._id} service={service} />
         ))}
       </div>
       <button className="btn border-[#FF3811] bg-white text-[#FF3811] mt-10">
