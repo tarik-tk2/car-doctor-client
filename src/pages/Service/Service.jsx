@@ -3,11 +3,20 @@ import ServiceCard from "./ServiceCard/ServiceCard";
 
 const Service = () => {
   const [services, setSetServices] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [page, setPage] = useState(1);
+  const handlePage = () => {
+    setPage(page + 1);
+  }
   useEffect(() => {
-    fetch("http://localhost:4000/services")
-      .then((res) => res.json())
-      .then((data) => setSetServices(data));
-  }, []);
+    setLoading(true);
+    setTimeout(() => { 
+      fetch(`http://localhost:4000/services?page=${page}&limit=3`)
+        .then((res) => res.json())
+        .then((data) => setSetServices([...services,...data]));
+      setLoading(false)
+    },2000)
+  }, [page]);
 
   return (
     <div>
@@ -29,8 +38,11 @@ const Service = () => {
           <ServiceCard key={service._id} service={service} />
         ))}
       </div>
-      <button className="btn border-[#FF3811] bg-white text-[#FF3811] mt-10">
-        {" "}
+      <button
+        className="btn border-[#FF3811] bg-white text-[#FF3811] mt-10"
+        onClick={handlePage}
+      >
+        {loading && <span className="loading loading-dots loading-sm"></span>}
         More Services
       </button>
     </div>
